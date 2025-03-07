@@ -613,7 +613,7 @@ cell AMX_NATIVE_CALL Natives::DynamicPlayerTextDrawSetSelectable(AMX* amx, cell*
 	it->second->selectable = selectable;
 
 	if (it->second->real_id != INVALID_DYNAMIC_PLAYER_TEXTDRAW) {
-		PlayerTextDrawSetProportional(playerid, it->second->real_id, it->second->selectable);
+		PlayerTextDrawSetSelectable(playerid, it->second->real_id, it->second->selectable);
 	}
 
 	return 1;
@@ -841,7 +841,7 @@ cell AMX_NATIVE_CALL Natives::DynamicPlayerTextDrawSetPreviewModel(AMX* amx, cel
 	it->second->modelindex = model;
 
 	if (it->second->real_id != INVALID_DYNAMIC_PLAYER_TEXTDRAW) {
-		PlayerTextDrawSetProportional(playerid, it->second->real_id, it->second->modelindex);
+		PlayerTextDrawSetPreviewModel(playerid, it->second->real_id, it->second->modelindex);
 	}
 
 	return 1;
